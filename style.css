@@ -1,0 +1,435 @@
+@charset "UTF-8";
+/*全体のフォントと文字サイズ*/
+/*フォントを変えたいときは一番最初のフォントだけ変えればOK（この下の全体のフォントを変えるならMeiryoの部分を変えたいフォント名にすれば変わる）*/
+body{
+    font-family: 'M PLUS Rounded 1c','Sawarabi Gothic','Hiragino Kaku Gothic','sans-serif';
+    font-size: 16px;
+    border-top: 10px solid #708090 !important;
+}
+input,textarea,select{
+    font-family: 'M PLUS Rounded 1c','Sawarabi Gothic','Hiragino Kaku Gothic','sans-serif';
+}
+
+.wf-sawarabigothic { font-family: "Sawarabi Gothic"; }
+
+p {
+    font-weight: 500;
+}
+
+/*　↓　滑らかにスクロール移動するためのコード*/
+html{
+    scroll-behavior: smooth;
+}
+
+
+/*ページ上部に戻るボタンの設定*/
+.page_top_btn {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-weight: bold;
+    padding: 0.7em;
+    text-align: center;
+    background: rgb(86, 101, 109);
+    color: #fff;
+    transition: 0.3s0;
+  }
+  
+    /* マウスオーバー時 */
+  .page_top_btn:hover {
+    background: rgb(86, 101, 109, 0.8);
+    color: rgb(255, 255, 255, 0.8);
+  }
+
+
+
+
+/*トップページの上のロゴのサイズ*/
+.logo{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+/*ロゴの画像とロゴ周りの余白サイズ*/
+.logo img{
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.header{
+    width: 100%;
+    margin: 0 auto;
+}
+.logo h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.logo p{
+    font-size: 12px;
+    font-family: -apple-system, blinkMacSystemFont, /* Macの欧文はSan Francisco (OS X 10.11以降) */
+    'Helvetica Neue',            /* Macの欧文 (OS X 10.10以前) */
+    'Segoe UI',                  /* Windowsの欧文 */
+    'Hiragino Kaku Gothic ProN', /* Macのヒラギノ */
+    Meiryo,                      /* Windowsのメイリオ */
+    sans-serif;
+}
+.header ul{
+    display: flex;
+    margin-bottom: 30px;
+}
+/*トップページの上の線の色*/
+.header ul li{
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+    border-right: 1px solid #778899;
+}
+/*トップページのTOP、WORK、CONTACTを囲んでいる短い縦線の色*/
+.header ul li :first-child{
+    border-left: 1px solid #778899;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.header ul li a{
+    display: block;
+}
+.header_img{
+    text-align: center;
+}
+.header_img img{
+    display: inline-block;
+}
+
+
+.wrapper{
+    max-width: 960px;
+    margin: 0 auto 130px auto;
+    padding: 0.4%;
+}
+
+
+
+
+/*コンテナ内ここから*/
+
+/*Aboutのデザイン*/
+.sec-title{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    font-family:  "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+.sabtitle{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 7px;
+    font-family:"游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;;
+}
+.main{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+
+
+
+/*Workのデザイン*/
+.thr-title{
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.icon-list ul li{
+    display: inline-block;
+}
+.icon-list{
+    margin-top: 20px;
+}
+
+/*施工例下のエイジング・疑似塗装等のボタンのデザイン*/
+a.btn_24 {
+	display: block;
+	text-align: center;
+    width: 220px;
+    height: 80px;
+	margin: 5px;
+	padding: 27px;
+	border-radius: 6px; /*この数字を増やすと角のまるみが大きくなる*/
+	border: 2px solid #8f9fbb; /*数字を増やすと周りの線が太くなる。色コードを変えれば線の色が変わる*/
+	color: #305461; /*文字の色*/
+    font-weight: 600;
+	position: relative;
+ 	overflow: hidden;
+ 	z-index: 1;
+	transition: all 0.2s ease-in;
+}
+a.btn_24:before {
+ content: "";
+ position: absolute;
+ left: 50%;
+ transform: translateX(-50%) scaleY(1) scaleX(1.25);
+ top: 100%;
+ width: 140%;
+ height: 180%;
+ background-color: rgba(0, 0, 0, 0.05);
+ border-radius: 50%;
+ display: block;
+ transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+ z-index: -1;
+}
+ 
+a.btn_24:after {
+ content: "";
+ position: absolute;
+ left: 55%;
+ transform: translateX(-50%) scaleY(1) scaleX(1.45);
+ top: 180%;
+ width: 160%;
+ height: 190%;
+ background-color: #27acd9;
+ border-radius: 50%;
+ display: block;
+ transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+ z-index: -1;
+}
+ 
+a.btn_24:hover {
+ color: #ffffff;
+ border: 2px solid #355e6b;
+}
+ 
+a.btn_24:hover:before {
+ top: -35%;
+ background-color: #355e6b;
+ transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+ 
+a.btn_24:hover:after {
+ top: -45%;
+ background-color: #355e6b;
+ transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+
+/*Work内の黒文字（h3がエイジング・疑似塗装、特殊塗装、サンプルという文字のデザイン
+pがサンプルの「板の上に筆などで～」の文字のデザイン）*/
+.list-aa h3{
+    text-align: center;
+    margin-top: 150px;
+    font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+.list-aa p{
+    text-align: center;
+    margin: 10px;
+}
+
+.list-a{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 2px;
+}
+.list-a img{
+    margin: 15px;
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+}
+.list-a img{
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.list-a img:hover{
+    transform: scale(1.05, 1.05);
+    opacity: 0.7s;
+}
+.box{
+    position: relative;
+  }
+  .bottom-left {
+    
+    position: absolute;
+    bottom: 25px;
+    left: 35px;
+    color: #000000;
+    background-color: rgba(186, 186, 186, 0.7);
+    border-radius: 5px;
+  }
+
+
+
+
+
+/*ここからContactのデザイン*/
+.contact-text{
+    margin-top: 30px;
+    text-align: center;
+}
+.contact-text p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.contact-text p2{
+    font-weight: 600;
+    margin-left: 40px;
+}
+.contact-url{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    
+}
+.contact-url p{
+    font-weight: 600;
+    margin-left: 30px;
+}
+
+
+/*地図情報*/
+.map {
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* = height ÷ width × 100 */ 
+  }
+  .map iframe {
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 60px;  
+  }
+
+
+/*最後のコメント*/
+.last-text{
+    margin-top: 70px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+  margin-left: 15%;
+  padding: 0 5px;
+  width: 70%;
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+  color: #FFF;
+  font-size: 17px;
+  font-weight: bold;
+  background: #3a3c39;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.last-text:before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #84bbeb;
+  z-index: 0;
+}
+
+
+
+
+/*footerデザイン*/
+.bottom{
+    margin-top: 80px;
+    text-align: center;
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.footer.logo{
+    display: inline-block;
+}
+
+.footer{
+    display: inline-block;
+    width: 100%;
+    background-color: #708090;
+    margin-top: 0px;
+}
+
+.footer p{
+    display: inline-block;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+
+/*スマートフォン版*/
+@media screen and (max-width:600px){
+    .header{
+        flex-direction: column;
+        height: auto;
+        line-height: 40px;
+        margin-top: 5px;
+        margin-left: auto;
+        text-align: left;
+    }
+    .pc_view{
+        display: none;
+      }
+  
+      .sp_view{
+        display: block;
+      }
+  
+    .logo{
+        margin-top: auto;
+    }
+    .sec-title{
+        text-align: left;
+        margin-left: 10px;
+    }
+    .sabtitle{
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+    .main{
+        text-align: left;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .icon-list{
+        margin-left: 4%;
+    }
+    a.btn_24{
+        width: auto;
+        margin: 3px;
+    }
+    .list-a{
+        margin-left: 4%;
+    }
+
+    .list-a img{
+        float: none;
+        width: 100px;
+        height: 100px;
+        margin: 4px;
+    }
+    .bottom-left{
+        font-size: small;
+        bottom: 10px;
+        left: 15px;
+    }
+    
+} 
